@@ -1,0 +1,225 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(163, 12, 81, 1) 35%, rgba(0, 255, 47, 1) 100%);
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.hero-section {
+  background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-section h2 {
+  font-size: 2.5em;
+  margin: 0 0 10px;
+}
+
+.learn-more-btn {
+  background-color: #fff;
+  color: #4CAF50;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.about-section,
+.services-section,
+.doctors-section {
+  padding: 40px 20px;
+  text-align: left;
+  background-color: white;
+}
+
+.about-section h2,
+.services-section h2,
+.doctors-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-section p,
+.services-section p,
+.doctors-section p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.services-grid,
+.doctors-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-item,
+.doctor-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover,
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.doctor-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+}
+
+.book-token-btn,
+.confirm-appointment-btn,
+.cancel-booking-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.book-token-btn:hover,
+.confirm-appointment-btn:hover,
+.cancel-booking-btn:hover {
+  background-color: #388E3C;
+}
+
+.appointment-time-picker {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.appointment-time-picker label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="time"] {
+  padding: 5px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 1.4em;
+  }
+
+  .services-grid,
+  .doctors-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item,
+  .doctor-card {
+    width: 80%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
